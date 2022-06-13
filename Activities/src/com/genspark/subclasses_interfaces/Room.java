@@ -51,3 +51,23 @@ public class Room{
         return this.getLength()+"x"+ this.getWidth()+", floor"+ this.getFloor();
     }
 }
+
+//Write a subclass of the class Room called Classroom, which also has a private instance
+//variable of type int called numStudents, representing the maximum number of students
+//that the classroom can hold.
+
+public class ClassRoom extends Room{
+    int numStudents;
+//Write a constructor for Classroom which takes in two double variables and two ints.
+//The instance variable length should be set to the larger double, and the width should be
+//set to the smaller double as in Room. The instance variable floor should be set to the first
+//int, and the instance variable numStudents should be set to the second int. Leave the
+//instance variables as private in Room and use setters to access them.
+    public ClassRoom(double length,double width,int floor, int numStudents){
+        super.setFloor(floor);
+        super.setLength(length);
+        super.setWidth(width);
+        this.numStudents= numStudents;
+    }
+
+}
